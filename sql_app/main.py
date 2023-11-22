@@ -19,7 +19,7 @@ def get_db():
 
 
 @app.post("/student/")
-def create_student(student : schemas.StudentBase, db: Session = Depends(get_db())):
+def create_student(student : schemas.StudentBase, db: Session = Depends(get_db)):
     return crud_orm.create_student(student, db)
 
 
